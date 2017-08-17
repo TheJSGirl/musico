@@ -1,0 +1,10 @@
+import express from 'express';
+import './config/config.js';
+
+const port = process.env.PORT;
+
+const app = express();
+
+app.listen(port, () => {
+    console.log('app running at http://localhost:' + port);
+});
