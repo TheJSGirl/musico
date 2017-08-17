@@ -1,5 +1,7 @@
 import express from 'express';
 import './config/config.js';
+import './db/db';
+import './models/testing';
 
 const port = process.env.PORT;
 
