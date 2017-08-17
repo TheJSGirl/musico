@@ -3,6 +3,9 @@ CREATE TABLE users(
     username VARCHAR(255) UNIQUE NOT NULL,
     email VARCHAR(255) UNIQUE NOT NULL,
     password VARCHAR(100) NOT NULL,
+    pic  VARCHAR(15) DEFAULT "profile.jpg",
+    active VARCHAR(20) DEFAULT "true",
+    verified VARCHAR(20) DEFAULT "false",
     created_at TIMESTAMP DEFAULT NOW()
 );
 

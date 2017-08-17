@@ -5,6 +5,7 @@ CREATE TABLE posts(
     post_title VARCHAR(100) NOT NULL UNIQUE,
     post_body VARCHAR(255) NOT NULL,
     slug VARCHAR(100) NOT NULL UNIQUE,
+    status VARCHAR(15) DEFAULT "true",
     FOREIGN KEY (created_by) REFERENCES users(id)
 );
 
