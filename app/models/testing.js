@@ -3,10 +3,10 @@ import Sequelize from 'sequelize';
 
 const Test = sequelize.define('test', {
   firstName: {
-    type: Sequelize.STRING
+  type: Sequelize.STRING
   },
   lastName: {
-    type: Sequelize.STRING
+  type: Sequelize.STRING
   }
 });
 
@@ -14,7 +14,7 @@ const Test = sequelize.define('test', {
 Test.sync({force: true}).then(() => {
   // Table created
   return Test.create({
-    firstName: 'John',
-    lastName: 'Hancock'
+  firstName: 'John',
+  lastName: 'Hancock'
   });
 });

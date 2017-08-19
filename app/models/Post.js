@@ -3,42 +3,42 @@ import Sequelize from 'sequelize';
 
 const Post = sequelize.define('posts', {
  id:{
-     type: Sequelize.INTEGER,
-     autoIncrement: true,
-     primaryKey: true
-    },
+   type: Sequelize.INTEGER,
+   autoIncrement: true,
+   primaryKey: true
+  },
 
  created_by: {
-    type: Sequelize.INTEGER,
-    allowNull: false
+  type: Sequelize.INTEGER,
+  allowNull: false
  },
 
  created_at: {
-     type: 'TIMESTAMP',
-     defaultValue: Sequelize.NOW
+   type: 'TIMESTAMP',
+   defaultValue: Sequelize.NOW
  }, 
 
  post_title: {
-     type: Sequelize.STRING(55),
-     unique: true,
-     allowNull: false
+   type: Sequelize.STRING(55),
+   unique: true,
+   allowNull: false
  },
 
  post_body: {
-     type: Sequelize.STRING(255),
-     allowNull: false
+   type: Sequelize.STRING(255),
+   allowNull: false
 
  },
 
  slug: {
-     type: Sequelize.STRING(100),
-     unique: true,
-     defaultValue: true
-    },
+   type: Sequelize.STRING(100),
+   unique: true,
+   defaultValue: true
+  },
 
  status: {
-     type: Sequelize.BOOLEAN,
-     defaultValue: true
+   type: Sequelize.BOOLEAN,
+   defaultValue: true
 
  }
 
