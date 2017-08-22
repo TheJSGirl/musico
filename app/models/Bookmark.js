@@ -2,18 +2,18 @@ import sequelize from '../db/db';
 import Sequelize from 'sequelize';
 
 const Bookmark = sequelize.define('bookmarks', {
-    post_id: {
-        type: Sequelize.INTEGER,
-        allowNull: false
-    },
+  post_id: {
+    type: Sequelize.INTEGER,
+    allowNull: false
+  },
 
-    user_id: {
-        type: Sequelize.INTEGER,
-        allowNull: false
-    },
-    created_at: {
-        defaultValue: Sequelize.NOW
-    }
+  user_id: {
+    type: Sequelize.INTEGER,
+    allowNull: false
+  },
+  created_at: {
+    defaultValue: Sequelize.NOW
+  }
 });
 
  Bookmark.hasOne( Post, { foreignKey: 'post_id' });

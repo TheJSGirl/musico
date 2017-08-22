@@ -3,47 +3,47 @@ import Sequelize from 'sequelize';
 
 const User = sequelize.define('users', {
  id:{
-     type: Sequelize.INTEGER,
-     autoIncrement: true,
-     primaryKey: true
-    },
+   type: Sequelize.INTEGER,
+   autoIncrement: true,
+   primaryKey: true
+  },
 
  username: {
-     type: Sequelize.STRING,
-     unique: true,
-     allowNull: false
-    },
+   type: Sequelize.STRING,
+   unique: true,
+   allowNull: false
+  },
 
  email: {
-     type: Sequelize.STRING,
-     unique: true,
-     allowNull: false
+   type: Sequelize.STRING,
+   unique: true,
+   allowNull: false
  },
 
  password: {
-     type: Sequelize.STRING,
-     allowNull: false
+   type: Sequelize.STRING,
+   allowNull: false
 
  },
 
  pic: {
-     type: Sequelize.STRING,
-     defaultValue: profile.jpg
-    },
+   type: Sequelize.STRING,
+   defaultValue: profile.jpg
+  },
 
  active: {
-     type: Sequelize.STRING,
-     defaultValue: true
+   type: Sequelize.STRING,
+   defaultValue: true
 
  },
 
  verified: {
-     type: Sequelize.STRING,
-     defaultValue: false
+   type: Sequelize.STRING,
+   defaultValue: false
  },
 
  created_at: {
-     defaultValue: Sequelize.NOW
+   defaultValue: Sequelize.NOW
  }
 
 });
